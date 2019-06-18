@@ -35,8 +35,9 @@ const config = {
     host: process.env.DATABASE_HOST || '127.0.0.1',
     port: process.env.DATABASE_PORT || 27017,
     database: process.env.DATABASE_NAME || 'backend-api-development'
-
   }
 };
+
+console.info(`database connect  ===========>>> : ${process.env.DATABASE_HOST} ${process.env.DATABASE_PORT}`);
 
 module.exports = config;
