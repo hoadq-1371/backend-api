@@ -39,4 +39,6 @@ const config = {
   }
 };
 
+console.info(`database connect  ===========>>> : ${process.env.DATABASE_HOST} ${process.env.DATABASE_PORT}`);
+
 module.exports = config;
