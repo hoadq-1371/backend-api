@@ -14,10 +14,10 @@ Promise = require('bluebird'); // eslint-disable-line no-global-assign
 mongoose.Promise = Promise;
 // mongo host
 const mongoHost = config.mongo.host;
-// mongo port
-const mongoPort = config.mongo.port;
+// mongo DB name
+const mongoDb = config.mongo.database;
 // connect to mongo db
-const mongoUri = `mongodb://${mongoHost}/${mongoPort}`;
+const mongoUri = `mongodb://${mongoHost}/${mongoDb}`;
 mongoose.connect(mongoUri, { server: { socketOptions: { keepAlive: 1 } } });
 mongoose.connection.on('error', () => {
   throw new Error(`unable to connect to database: ${mongoUri}`);
