@@ -38,6 +38,6 @@ const config = {
   }
 };
 
-console.info(`database connect  ===========>>> : ${process.env.DATABASE_HOST} ${process.env.DATABASE_PORT}`);
+console.info(`database connect  ===========>>> : ${process.env.MONGODB_URI}`);
 
 module.exports = config;
