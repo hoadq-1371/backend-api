@@ -12,9 +12,12 @@ Promise = require('bluebird'); // eslint-disable-line no-global-assign
 
 // plugin bluebird promise in mongoose
 mongoose.Promise = Promise;
-
+// mongo host
+const mongoHost = config.mongo.host;
+// mongo port
+const mongoPort = config.mongo.port;
 // connect to mongo db
-const mongoUri = config.mongo.host;
+const mongoUri = `mongodb://${mongoHost}/${mongoPort}`;
 mongoose.connect(mongoUri, { server: { socketOptions: { keepAlive: 1 } } });
 mongoose.connection.on('error', () => {
   throw new Error(`unable to connect to database: ${mongoUri}`);
