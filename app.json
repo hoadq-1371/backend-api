@@ -1,0 +1,13 @@
+{
+  "name": "backend api",
+  "description": "backend api for eCommerce platform",
+  "repository": "https://github.com/hoadq-1371/backend-api",
+  "logo": "http://cdn.onlinewebfonts.com/svg/img_178343.png",
+  "keywords": ["node", "express", "API"],
+  "addons": [
+    {
+      "plan": "mongolab:sandbox",
+      "as": "DATABASE"
+    }
+  ]
+}
